@@ -1,13 +1,16 @@
-// Get player's name:
-// let person = window.prompt("Hi! What's your name?");
-// let txt;
-// if (person === null || person === "") {
-//   txt = 'No Name';
-// } else {
-//   txt = person;
-// }
-// document.getElementById("name").innerHTML = txt.toUpperCase();
+// Audio:
+function angry() {
+    var angry = new Audio('angry.mp3');
+    angry.play();    
+}
 
+function laugh() {
+    var laugh = new Audio('laugh.mp3');
+    laugh.play();    
+}
+
+const bgmusic = document.getElementById("player");
+bgmusic.volume = 0.3;
 
 // Function starts here:
 function getRandom() {
@@ -39,9 +42,11 @@ function rock() {
     } else if (myChoice === "paper") {
         document.getElementById("score").innerHTML = "KHOI WON!";
         document.getElementById("myface").src = "happyface.jpg";
+        laugh();
     } else {
         document.getElementById("score").innerHTML = "YOU WON!";
         document.getElementById("myface").src = "angryface.jpg";
+        angry();
     }
 }
 
@@ -52,10 +57,12 @@ function paper() {
         document.getElementById("score").innerHTML = "IT'S A TIE!";
     } else if (myChoice === "scissors") {
         document.getElementById("score").innerHTML = "KHOI WON!";
-        document.getElementById("myface").src = "happyface.jpg";        
+        document.getElementById("myface").src = "happyface.jpg";   
+        laugh();     
     } else {
         document.getElementById("score").innerHTML = "YOU WON!";
         document.getElementById("myface").src = "angryface.jpg";
+        angry();
         
     }
 }
@@ -68,8 +75,10 @@ function scissors() {
     } else if (myChoice === "rock") {
         document.getElementById("score").innerHTML = "KHOI WON!";
         document.getElementById("myface").src = "happyface.jpg";
+        laugh();
     } else {
         document.getElementById("score").innerHTML = "YOU WON!";
         document.getElementById("myface").src = "angryface.jpg";
+        angry();
     }
 }
