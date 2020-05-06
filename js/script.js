@@ -2,11 +2,13 @@
 function angry() {
     var angry = new Audio('angry.mp3');
     angry.play();    
+    angry.volume = 0.3;
 }
 
 function laugh() {
     var laugh = new Audio('laugh.mp3');
     laugh.play();    
+    laugh.volume = 0.3;
 }
 //Background music:
 const bgmusic = document.getElementById("bgmusic");
