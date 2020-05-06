@@ -9,15 +9,15 @@ function laugh() {
     laugh.play();    
 }
 //Background music:
-function play() {
-    const bgmusic = document.getElementById("bgmusic");
-    bgmusic.play();
-    bgmusic.volume = 0.3;
+const bgmusic = document.getElementById("bgmusic");
+bgmusic.volume = 0.1;
+
+function play() {    
+    bgmusic.play();    
     bgmusic.muted = false;
 }
 
-function mute() {
-    const bgmusic = document.getElementById("bgmusic");
+function mute() {    
     bgmusic.muted = true;    
 }
 
