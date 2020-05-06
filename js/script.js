@@ -8,11 +8,20 @@ function laugh() {
     var laugh = new Audio('laugh.mp3');
     laugh.play();    
 }
+//Background music:
+function play() {
+    const bgmusic = document.getElementById("bgmusic");
+    bgmusic.play();
+    bgmusic.volume = 0.3;
+    bgmusic.muted = false;
+}
 
-const bgmusic = document.getElementById("player");
-bgmusic.volume = 0.3;
+function mute() {
+    const bgmusic = document.getElementById("bgmusic");
+    bgmusic.muted = true;    
+}
 
-// Function starts here:
+// Function for game starts here:
 function getRandom() {
     min = Math.ceil(1);
     max = Math.floor(3);
