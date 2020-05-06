@@ -10,10 +10,11 @@ function laugh() {
 }
 //Background music:
 const bgmusic = document.getElementById("bgmusic");
-bgmusic.volume = 0.1;
+bgmusic.volume = 0.05;
 
 function play() {    
     bgmusic.play();    
+    bgmusic.volume = 0.05;
     bgmusic.muted = false;
 }
 
