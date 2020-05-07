@@ -3,13 +3,14 @@ function angry() {
     var angry = new Audio('angry.mp3');
     angry.play();    
     angry.volume = 0.3;
-}
+};
 
 function laugh() {
     var laugh = new Audio('laugh.mp3');
     laugh.play();    
     laugh.volume = 0.3;
-}
+};
+
 //Background music:
 const bgmusic = document.getElementById("bgmusic");
 bgmusic.volume = 0.05;
@@ -28,7 +29,7 @@ function mute() {
 function getRandom() {
     min = Math.ceil(1);
     max = Math.floor(3);
-    return Math.floor(Math.random() * (3 - 1 + 1)) + 1; //The maximum is inclusive and the minimum is inclusive       
+    return Math.floor(Math.random() * 3) + 1; //The maximum is inclusive and the minimum is inclusive       
 }
 
 function myChoice() {   // This is Khoi's choice
