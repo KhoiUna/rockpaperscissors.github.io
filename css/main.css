@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
 h1 ,h2, h3, h4, h5, h6 {
@@ -13,7 +13,7 @@ body {
 
 .col {        
     text-align: center;
-    padding: 1%;
+    padding: 0.5%;
 }
 
 ul {
@@ -34,9 +34,12 @@ button {
     border: 5px solid black;
 }
 
-#mychoice , #playerchoice {
-    border: 5px solid black;
-    width: 40%;
+#khoiscore, #yourscore {    
+    font-weight: bold;    
 }
 
+#mychoice , #playerchoice {
+    border: 5px solid black;
+    width: 30%;
+}
 
