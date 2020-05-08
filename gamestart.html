@@ -51,7 +51,7 @@
 
         <div class="row">
             <div class="col">
-                <h4 style="font-weight: bold; text-align: center; color: red;">KHOI'S SCORE: <span id = "khoiscore"></span></h4>
+                <h4 style="font-weight: bold; text-align: center; color: red;">KHOI'S SCORE: <span id = "khoiscore">0</span></h4>
             </div>
 
             <div class="col">
@@ -59,7 +59,7 @@
             </div>         
 
             <div class="col">
-                <h4 style="font-weight: bold; text-align: center; color: aqua;">YOUR SCORE: <span id = "yourscore"></span></h4>
+                <h4 style="font-weight: bold; text-align: center; color: aqua;">YOUR SCORE: <span id = "yourscore">0</span></h4>
             </div>   
         </div>
 
@@ -71,19 +71,19 @@
 
         <div class="row">
             <div class="col">
-                <h2 id="name" style="color: aqua;">YOU</h2>           
+                <h2 id="name" style="color: aqua;">YOU</h2>         
             </div>
         </div>
 
         <div class="row" style="padding-top: 0%;">
             <div class="col">
-                <button type="button" onclick="rock()" class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">ROCK</button>
+                <button type="button" id="rock" class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">ROCK</button>
             </div>
             <div class="col">
-                <button type="button" onclick="paper()" class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">PAPER</button>
+                <button type="button" id="paper"  class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">PAPER</button>
             </div>
             <div class="col">
-                <button type="button" onclick="scissors()" class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">SCISSORS</button>
+                <button type="button" id="scissors" class="btn btn-outline-primary" style="background-color: rgb(32, 215, 240);">SCISSORS</button>
             </div>
         </div>        
 
@@ -92,7 +92,7 @@
                 <a href="./index.html"><button type="button" class="btn btn-outline-primary" style="background-color: white;">HOME</button></a>
             </div>
             <div class="col" style="text-align: left; padding-left: 10%;">
-                <a href="./gamestart.html"><button type="button" class="btn btn-outline-primary" style="background-color: white;">PLAY AGAIN</button></a>
+                <a href="./gamestart.html"><button type="button" id="playagain" class="btn btn-outline-primary" style="background-color: white;" disabled>PLAY AGAIN</button></a>
             </div>
         </div>
         
@@ -107,7 +107,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
     <script src="js/script.js"></script>
 </body>
 </html>
