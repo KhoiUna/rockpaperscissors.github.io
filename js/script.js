@@ -26,72 +26,131 @@ function mute() {
 }
 
 // Function for game starts here:
+let khoiscore = 0;
+let yourscore = 0;
+
+function disableRPSButtons() {
+    document.querySelector("#rock").disabled = true;
+    document.querySelector("#paper").disabled = true;
+    document.querySelector("#scissors").disabled = true;
+}
+
 function getRandom() {
     min = Math.ceil(1);
     max = Math.floor(3);
-    return Math.floor(Math.random() * 3) + 1; //The maximum is inclusive and the minimum is inclusive       
+    return randomChoice = Math.floor(Math.random() * 3) + 1; //The maximum is inclusive and the minimum is inclusive       
 }
 
-function myChoice() {   // This is Khoi's choice
-    let randomChoice = getRandom();
+const myChoice = () => {   // This is Khoi's choice
+    getRandom();
     if (randomChoice === 1) {
         document.getElementById("mychoice").src = "myrock.jpg";
-        return myChoice = "rock";
+        return khoiChoice = "rock";
     } else if (randomChoice === 2) {
         document.getElementById("mychoice").src = "mypaper.jpg";
-        return myChoice = "paper";
+        return khoiChoice = "paper";
     } else {
         document.getElementById("mychoice").src = "myscissors.jpg";
-        return myChoice = "scissors";
+        return khoiChoice = "scissors";
+    }
+}
+
+// Function Rock, Paper, Scissors to call & compare:
+const rock = () => {
+    myChoice();    
+    if (khoiChoice === "rock") {
+        document.getElementById("score").innerHTML = "IT'S A TIE!";
+    } else if (khoiChoice === "paper") {
+        document.getElementById("score").innerHTML = "KHOI WON!";
+        document.getElementById("myface").src = "happyface.jpg";
+        laugh();
+        khoiscore ++;
+        document.getElementById("khoiscore").innerHTML = khoiscore;
+        if (khoiscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
+    } else {
+        document.getElementById("score").innerHTML = "YOU WON!";
+        document.getElementById("myface").src = "angryface.jpg";
+        angry();
+        yourscore ++;
+        document.getElementById("yourscore").innerHTML = yourscore;
+        if (yourscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
+    }
+}
+
+const paper = () => {
+    myChoice();    
+    if (khoiChoice === "paper") {
+        document.getElementById("score").innerHTML = "IT'S A TIE!";
+    } else if (khoiChoice === "scissors") {
+        document.getElementById("score").innerHTML = "KHOI WON!";
+        document.getElementById("myface").src = "happyface.jpg";   
+        laugh();
+        khoiscore ++;
+        document.getElementById("khoiscore").innerHTML = khoiscore;        
+        if (khoiscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
+    } else {
+        document.getElementById("score").innerHTML = "YOU WON!";
+        document.getElementById("myface").src = "angryface.jpg";
+        angry();
+        yourscore ++;
+        document.getElementById("yourscore").innerHTML = yourscore;
+        if (yourscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
+    }
+}
+
+const scissors = () => {
+    myChoice();    
+    if (khoiChoice === "scissors") {
+        document.getElementById("score").innerHTML = "IT'S A TIE!";
+    } else if (khoiChoice === "rock") {
+        document.getElementById("score").innerHTML = "KHOI WON!";
+        document.getElementById("myface").src = "happyface.jpg";
+        laugh();
+        khoiscore ++;
+        document.getElementById("khoiscore").innerHTML = khoiscore;
+        if (khoiscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
+    } else {
+        document.getElementById("score").innerHTML = "YOU WON!";
+        document.getElementById("myface").src = "angryface.jpg";
+        angry();
+        yourscore ++;
+        document.getElementById("yourscore").innerHTML = yourscore;
+        if (yourscore === 3) {
+            document.querySelector("#playagain").disabled = false;
+            disableRPSButtons();
+        }
     }
 }
 
 // Player's choice starts here:
-function rock() {
-    myChoice();
-    document.getElementById("playerchoice").src = "rock.jpg";
-    if (myChoice === "rock") {
-        document.getElementById("score").innerHTML = "IT'S A TIE!";
-    } else if (myChoice === "paper") {
-        document.getElementById("score").innerHTML = "KHOI WON!";
-        document.getElementById("myface").src = "happyface.jpg";
-        laugh();
-    } else {
-        document.getElementById("score").innerHTML = "YOU WON!";
-        document.getElementById("myface").src = "angryface.jpg";
-        angry();
-    }
-}
+$(function() {
+    $("#rock").click(function(){
+        rock();
+        $("#playerchoice").attr("src","rock.jpg");        
+    });
 
-function paper() {
-    myChoice();
-    document.getElementById("playerchoice").src = "paper.jpg";
-    if (myChoice === "paper") {
-        document.getElementById("score").innerHTML = "IT'S A TIE!";
-    } else if (myChoice === "scissors") {
-        document.getElementById("score").innerHTML = "KHOI WON!";
-        document.getElementById("myface").src = "happyface.jpg";   
-        laugh();     
-    } else {
-        document.getElementById("score").innerHTML = "YOU WON!";
-        document.getElementById("myface").src = "angryface.jpg";
-        angry();
-        
-    }
-}
+    $("#paper").click(function(){
+        paper();
+        $("#playerchoice").attr("src","paper.jpg");        
+    });
 
-function scissors() {
-    myChoice();
-    document.getElementById("playerchoice").src = "scissors.jpg";
-    if (myChoice === "scissors") {
-        document.getElementById("score").innerHTML = "IT'S A TIE!";
-    } else if (myChoice === "rock") {
-        document.getElementById("score").innerHTML = "KHOI WON!";
-        document.getElementById("myface").src = "happyface.jpg";
-        laugh();
-    } else {
-        document.getElementById("score").innerHTML = "YOU WON!";
-        document.getElementById("myface").src = "angryface.jpg";
-        angry();
-    }
-}
+    $("#scissors").click(function(){
+        scissors();
+        $("#playerchoice").attr("src","scissors.jpg");             
+    });
+});
