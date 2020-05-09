@@ -43,3 +43,82 @@ button {
     width: 30%;
 }
 
+.popup-rule {
+    z-index: 1000;
+    background-color: white;    
+    position: fixed;
+    top: 20%;
+    left: 32%;
+    right: 0;
+    bottom: 0;
+    width: 35%;
+    height: 35%;    
+    border: 5px solid orange;    
+    border-radius: 5%;  
+    display: none;        
+}
+
+.popup {
+    z-index: 1000;
+    background-color: white;    
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 55%;    
+    border: 5px solid orange;    
+    border-radius: 5%;    
+    display: none;   
+}
+
+.popup-name {
+    z-index: 1000;
+    background-color: white;    
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 35%;    
+    border: 5px solid orange;    
+    border-radius: 5%;          
+}
+
+.popup-rule .col {
+    text-align: center;    
+    padding: 3%;   
+}
+
+.popup .col {    
+    text-align: center;    
+    padding: 5%;    
+}
+
+.popup-name .col {
+    text-align: center;    
+    padding: 3%;   
+}
+
+@media only screen and (max-width: 670px) {
+    .popup-rule {
+        width: 57%;
+        height: 30%;
+        top: 25%;
+        left: 25%;
+    }
+    
+    .popup {
+        height: 30%;
+        top: 25%;
+    }
+
+    .popup-name {
+        width: 50%;
+        height: 30%;
+        top: 25%;
+        left: 25%;
+    }    
+  }
