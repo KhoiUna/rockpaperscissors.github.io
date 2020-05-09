@@ -104,21 +104,46 @@ button {
 
 @media only screen and (max-width: 670px) {
     .popup-rule {
-        width: 57%;
-        height: 30%;
+        width: 63%;
+        height: 32%;
         top: 25%;
-        left: 25%;
+        left: 20%;
     }
     
     .popup {
         height: 30%;
+        width: 56%;        
         top: 25%;
+        left: 21.5%;
     }
 
     .popup-name {
-        width: 50%;
-        height: 30%;
+        width: 60%;
+        height: 31%;
         top: 25%;
-        left: 25%;
+        left: 21.5%;
     }    
-  }
+}
+
+@media only screen and (max-width: 360px) {
+    .popup-rule {
+        width: 65%;
+        height: 33%;
+        top: 25%;
+        left: 17.5%;
+    }
+
+    .popup {
+        height: 35%;
+        width: 60%;
+        top: 25%;
+        left: 21%;
+    }
+
+    .popup-name {
+        width: 55%;
+        height: 33%;
+        top: 25%;
+        left: 22.5%;
+    }    
+}
